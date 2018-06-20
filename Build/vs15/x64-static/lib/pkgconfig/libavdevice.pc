@@ -1,0 +1,14 @@
+prefix=./Build/vs15/x64-static
+exec_prefix=${prefix}
+libdir=./Build/vs15/x64-static/lib
+includedir=./Build/vs15/x64-static/include
+
+Name: libavdevice
+Description: FFmpeg device handling library
+Version: 58.3.100
+Requires: libavfilter >= 7.16.100, libswscale >= 5.1.100, libavformat >= 58.12.100, libavcodec >= 58.18.100, libswresample >= 3.1.100, libavutil >= 56.14.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavdevice psapi.lib ole32.lib strmiids.lib uuid.lib oleaut32.lib shlwapi.lib gdi32.lib vfw32.lib
+Libs.private: 
+Cflags: -I${includedir}

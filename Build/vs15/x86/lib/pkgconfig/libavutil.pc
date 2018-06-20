@@ -1,0 +1,14 @@
+prefix=../../../Build/vs15/x86
+exec_prefix=${prefix}
+libdir=../../../Build/vs15/x86/lib
+includedir=../../../Build/vs15/x86/include
+
+Name: libavutil
+Description: FFmpeg utility library
+Version: 56.14.100
+Requires: 
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavutil 
+Libs.private: user32.lib bcrypt.lib
+Cflags: -I${includedir}
